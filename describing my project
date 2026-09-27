@@ -1,0 +1,59 @@
+Here i am describing what are the features i have add in my project.
+
+1. Data Structure (rooms Dictionary)
+Logic: The hotel ledger uses a Python Dictionary where each key represents a unique room number (e.g., 101, 102).
+
+Value Format: Each key holds a list containing four elements: [Room Type, Price Per Day, Max Guest Limit, Status].
+
+Dynamic Status: The Status slot initially holds "Available". When booked, it is replaced with a nested dictionary holding guest details: {"name": ..., "phone": ..., "guests": ..., "days": ...}.
+
+
+2. View All Rooms (view_all_rooms)
+Logic: Iterates through every record in rooms.items() to extract key-value pairs.
+
+Unpacking: Details are unpacked directly into descriptive variables (room_type, price, capacity, availability) for code readability.
+
+Conditional Formatting: An if/else statement checks if availability == "Available". If True, it displays room details with an "AVAILABLE" tag; otherwise, it accesses availability["name"] to display who booked the room.
+
+
+
+3. Check Available Rooms Only (check_availability)
+Logic: Uses a standard counter pattern (count = 0).
+
+Filtering: Loops through rooms.items() and inspects index [3] of each room list.
+
+Counter Increment: If info[3] == "Available", it prints the room details and increments count += 1.
+
+Zero-Check: After the loop finishes, if count == 0, it alerts the user that no rooms are free.
+
+
+
+4. Guest Booking & Validation (book_room)
+Room Existence Check: Checks if room_no in rooms to ensure the requested room number is valid.
+
+Availability Guard: Checks if rooms[room_no][3] != "Available" to prevent double-booking an occupied room.
+
+Capacity Limit Check: Compares user input guest_count against rooms[room_no][2]. If guest_count > max_capacity, the booking is rejected.
+
+Duration Validation: Ensures stay duration is at least 1 day (stay_days > 0).
+
+Data Storage: Stores all guest inputs into a dictionary and updates rooms[room_no][3].
+
+
+
+5. Checkout & Billing Logic (checkout_and_billing)
+Active Booking Verification: Confirms the room exists and is currently occupied (rooms[room_no][3] != "Available").
+
+Bill Calculation: Multiplies the daily price by the total stay duration:
+
+Total Bill=Price per Day×Days Stayed
+Status Reset: Resets rooms[room_no][3] = "Available" to make the room ready for new bookings.
+
+
+
+6. Interactive Control Loop (while True)
+Logic: Runs an infinite menu loop using while True: so the application stays open until the user explicitly selects option 5 (Exit).
+
+Menu Routing: Uses if / elif / else statements to route user input choices (1-5) to their corresponding functions.
+
+
