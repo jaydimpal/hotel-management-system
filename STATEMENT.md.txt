@@ -1,0 +1,34 @@
+Project Statement: Hotel Management System
+
+Problem Statement:
+Hotels often face challenges in managing room bookings, guest records, room availability, and
+billing manually. Without a proper system, these tasks can become time-consuming, error-prone,
+and difficult to organize. This project aims to provide a structured and efficient solution for
+handling core hotel operations.
+
+Scope of Project:
+This project focuses on a basic hotel management system that supports room management,
+customer registration, booking records, billing, and daily operational tracking. The scope is
+limited to essential front-desk and administrative functions that help manage hotel services
+smoothly and efficiently.
+
+Target Users:
+This system is designed for hotel managers, receptionists, front desk staff, and administrators
+who need to manage bookings, guest information, room occupancy, and payments. It is especially
+useful for small to medium-sized hotels that require a simple and organized digital solution.
+
+High-Level Features:
+- Register and manage guest details
+- Track room availability and room categories
+- Handle booking, check-in, and check-out operations
+- Store reservation information and customer records
+- Generate bills and monitor payment status
+- Maintain room occupancy and service updates
+- Provide a simple overview of hotel activities for staff use
+
+Overall Goal:
+The main goal of the Hotel Management System is to simplify hotel operations, improve customer
+service, reduce manual workload, and ensure efficient management of rooms, bookings, and billing.
+"""
+26BHI10025
+ISHA VARDHAN
